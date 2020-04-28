@@ -1,0 +1,35 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{n} \hlkwb{<-} \hlkwd{length}\hlstd{(x)}
+\hlstd{jackdf} \hlkwb{<-} \hlkwd{kronecker}\hlstd{(}\hlkwd{matrix}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{1}\hlstd{, n), x)}
+
+\hlkwd{kable}\hlstd{(jackdf[}\hlnum{1}\hlopt{:}\hlnum{10}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{10}\hlstd{])}
+\end{alltt}
+\end{kframe}
+\begin{tabular}{r|r|r|r|r|r|r|r|r|r}
+\hline
+15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15\\
+\hline
+60 & 60 & 60 & 60 & 60 & 60 & 60 & 60 & 60 & 60\\
+\hline
+45 & 45 & 45 & 45 & 45 & 45 & 45 & 45 & 45 & 45\\
+\hline
+10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10\\
+\hline
+30 & 30 & 30 & 30 & 30 & 30 & 30 & 30 & 30 & 30\\
+\hline
+60 & 60 & 60 & 60 & 60 & 60 & 60 & 60 & 60 & 60\\
+\hline
+45 & 45 & 45 & 45 & 45 & 45 & 45 & 45 & 45 & 45\\
+\hline
+10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10\\
+\hline
+25 & 25 & 25 & 25 & 25 & 25 & 25 & 25 & 25 & 25\\
+\hline
+15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15\\
+\hline
+\end{tabular}
+
+
+\end{knitrout}

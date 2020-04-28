@@ -1,0 +1,28 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{h_cv_np_ml} \hlkwb{<-} \hlkwd{npudensbw}\hlstd{(}
+ \hlkwc{dat} \hlstd{= x,}
+ \hlkwc{bwmethod} \hlstd{=} \hlstr{"cv.ml"}\hlstd{,}
+ \hlkwc{ckertype} \hlstd{=} \hlstr{"epanechnikov"}
+\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+Multistart 1 of 1 |
+Multistart 1 of 1 |
+Multistart 1 of 1 |
+Multistart 1 of 1 /
+Multistart 1 of 1 |
+Multistart 1 of 1 |
+                   
+\end{verbatim}
+\begin{alltt}
+\hlstd{dens.np} \hlkwb{<-} \hlkwd{npudens}\hlstd{(h_cv_np_ml)}
+
+\hlkwd{plot}\hlstd{(dens.np,} \hlkwc{type} \hlstd{=} \hlstr{"b"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-30-1} 
+
+\end{knitrout}

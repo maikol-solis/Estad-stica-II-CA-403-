@@ -1,0 +1,20 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{B} \hlkwb{<-} \hlnum{1000}
+\hlstd{Tboot_b} \hlkwb{<-} \hlkwa{NULL}
+
+\hlkwa{for}\hlstd{(b} \hlkwa{in} \hlnum{1}\hlopt{:}\hlstd{B) \{}
+\hlstd{xb} \hlkwb{<-} \hlkwd{sample}\hlstd{(x,} \hlkwc{size} \hlstd{= n,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{Tboot_b[b]} \hlkwb{<-} \hlkwd{var}\hlstd{(xb)}
+\hlstd{\}}
+
+
+\hlstd{Tboot_b[}\hlnum{1}\hlopt{:}\hlnum{10}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+##  [1] 384.8959 439.3992 540.4429 356.0363 382.5001 539.7398 389.2075 355.4033
+##  [9] 371.0053 469.0120
+\end{verbatim}
+\end{kframe}
+\end{knitrout}

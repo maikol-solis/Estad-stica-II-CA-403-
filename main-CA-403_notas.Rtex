@@ -1,0 +1,128 @@
+%%begin novalidate
+\documentclass[12pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{newpxtext,newpxmath}
+\usepackage{graphics}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\doublespacing
+\usepackage{csquotes}
+\usepackage[style=numeric-comp, sorting=none]{biblatex}
+\addbibresource{bibliografia.bib}
+%\usepackage{animate}
+\usepackage{media9}
+
+%\usepackage[margin=2cm]{geometry}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+\tcbuselibrary{breakable}
+
+\newtcbtheorem[number within=section]{nota}{Nota}%
+{breakable, colback=yellow!5, colframe=yellow!40!gray,
+	fonttitle=\bfseries}{nota}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{cuidado}{Cuidado}%
+{breakable, colback=red!5, colframe=red!50!gray,
+	fonttitle=\bfseries}{cuidado}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{tarea}{Tarea}%
+{breakable, colback=blue!5, colframe=blue!35!black,
+	fonttitle=\bfseries}{tarea}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{solucion}{Solución}%
+{breakable, colback=gray!5, colframe=gray!35!black,
+	fonttitle=\bfseries}{sol}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{pregunta}{Pregunta}%
+{breakable,  colback=green!5, colframe=green!35!black,
+	fonttitle=\bfseries}{preg}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{ejemplo}{Ejemplo}%
+{breakable, colback=magenta!10, colframe=magenta!50!black,
+	fonttitle=\bfseries}{ej}
+
+\newtcbtheorem[number within=section,use counter
+	from=nota]{laboratorio}{Laboratorio}%
+{breakable, colback=purple!10, colframe=purple!50!black,
+	fonttitle=\bfseries}{lab}
+%%end novalidate
+
+%%% DEFINICIÓN DE ESTILOS DE TEOREMAS %%%
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}{Lema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% NO EDITAR %%%%%
+%%begin novalidate
+<<librerias, cache=FALSE, echo=FALSE>>=
+library(ggplot2)
+library(knitr)
+@
+<<setup, cache=FALSE, echo=FALSE>>=
+options(knitr.duplicate.label = "allow")
+knitr::opts_chunk$set(
+	cache = TRUE,
+	dev = "CairoPDF",
+	fig.asp = 0.5,
+	tidy = TRUE,
+	tidy.opts = list(width.cutoff = 30),
+	error = TRUE,
+    split=TRUE
+	)
+
+	knitr::opts_knit$set(concordance = TRUE,
+self.contained = TRUE,
+verbose = TRUE)
+
+options(tinytex.verbose = TRUE)
+@
+
+<<theme, cache=FALSE, echo=FALSE>>=
+thm = knitr::knit_theme$get("bclear")
+	knitr::knit_theme$set(thm)
+@
+%%end novalidate
+%%%%%%%%%%%%%%%%
+
+\title{Notas del curso CA-403}
+\author{}
+\date{}
+\maketitle
+
+<<cap-0-instrucciones, child='cap-0-instrucciones.Rtex'>>=
+@
+\include{cap-0-instrucciones.Rtex}
+
+<<cap-1-estimacion-densidades-no-parametricas, child='cap-1-estimacion-densidades-no-parametricas.Rtex'>>=
+@
+\include{cap-1-estimacion-densidades-no-parametricas.Rtex}
+
+<<cap-2-jacknife-bootstrap, child='cap-2-jacknife-bootstrap.Rtex'>>=
+@
+\include{cap-2-jacknife-bootstrap.Rtex}
+
+\newpage
+\printbibliography
+\end{document}

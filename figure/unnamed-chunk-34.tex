@@ -1,0 +1,33 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fani} \hlkwb{<-} \hlkwd{tibble}\hlstd{()}
+
+\hlkwa{for} \hlstd{(b} \hlkwa{in} \hlkwd{seq}\hlstd{(}\hlnum{0.001}\hlstd{,} \hlnum{0.05}\hlstd{,} \hlkwc{length.out} \hlstd{=} \hlnum{40}\hlstd{)) \{}
+ \hlstd{f} \hlkwb{<-}
+   \hlkwd{npudens}\hlstd{(}
+     \hlkwc{tdat} \hlstd{= x,}
+     \hlkwc{ckertype} \hlstd{=} \hlstr{"epanechnikov"}\hlstd{,}
+     \hlkwc{bandwidth.compute} \hlstd{=} \hlnum{FALSE}\hlstd{,}
+     \hlkwc{bws} \hlstd{= b}
+   \hlstd{)}
+ \hlstd{fani} \hlkwb{<-}
+   \hlstd{fani} \hlopt{%>%} \hlkwd{bind_rows}\hlstd{(}\hlkwd{tibble}\hlstd{(}
+     \hlkwc{xreal} \hlstd{=} \hlkwd{sort}\hlstd{(x),}
+     \hlkwc{x} \hlstd{= f}\hlopt{$}\hlstd{eval}\hlopt{$}\hlstd{x,}
+     \hlkwc{y} \hlstd{= f}\hlopt{$}\hlstd{dens,}
+     \hlkwc{bw} \hlstd{= b}
+   \hlstd{))}
+\hlstd{\}}
+
+\hlkwd{ggplot}\hlstd{(}\hlkwc{data} \hlstd{= fani)} \hlopt{+}
+ \hlkwd{geom_line}\hlstd{(}\hlkwd{aes}\hlstd{(x, y),} \hlkwc{color} \hlstd{=} \hlstr{"blue"}\hlstd{)} \hlopt{+}
+ \hlkwd{labs}\hlstd{(}\hlkwc{title} \hlstd{=} \hlkwd{paste0}\hlstd{(}\hlstr{"Ancho de banda = \{closest_state\}"}\hlstd{))} \hlopt{+}
+ \hlkwd{transition_states}\hlstd{(bw)} \hlopt{+}
+ \hlkwd{view_follow}\hlstd{()} \hlopt{+}
+ \hlkwd{theme_minimal}\hlstd{(}\hlkwc{base_size} \hlstd{=} \hlnum{20}\hlstd{)}
+
+\hlkwd{anim_save}\hlstd{(}\hlstr{"manual_figure/bandwidth-animation-np.gif"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}

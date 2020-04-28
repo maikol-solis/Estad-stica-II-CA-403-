@@ -1,0 +1,26 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+   \hlstd{B} \hlkwb{<-} \hlnum{1000}
+   \hlstd{Tboot_b} \hlkwb{<-} \hlkwa{NULL}
+   \hlstd{Tboot_bm} \hlkwb{<-} \hlkwa{NULL}
+   \hlstd{sdboot_b} \hlkwb{<-} \hlkwa{NULL}
+
+   \hlkwa{for} \hlstd{(b} \hlkwa{in} \hlnum{1}\hlopt{:}\hlstd{B) \{}
+ \hlstd{xb} \hlkwb{<-} \hlkwd{sample}\hlstd{(x,} \hlkwc{size} \hlstd{= n,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+ \hlstd{Tboot_b[b]} \hlkwb{<-} \hlkwd{var}\hlstd{(xb)}
+ \hlkwa{for} \hlstd{(m} \hlkwa{in} \hlnum{1}\hlopt{:}\hlstd{B) \{}
+   \hlstd{xbm} \hlkwb{<-} \hlkwd{sample}\hlstd{(xb,} \hlkwc{size} \hlstd{= n,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+   \hlstd{Tboot_bm[b]} \hlkwb{<-} \hlkwd{var}\hlstd{(xbm)}
+ \hlstd{\}}
+ \hlstd{sdboot_b} \hlkwb{<-} \hlkwd{sd}\hlstd{(Tboot_bm)}
+   \hlstd{\}}
+
+   \hlstd{z_star} \hlkwb{<-} \hlstd{(Tboot_b} \hlopt{-} \hlstd{Tn)} \hlopt{/} \hlstd{sdboot_b}
+
+   \hlkwd{hist}\hlstd{(z_star)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-53-1} 
+
+\end{knitrout}

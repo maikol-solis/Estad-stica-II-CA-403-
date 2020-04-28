@@ -1,0 +1,35 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+knitr::set_parent('main-CA-403_notas.Rtex')
+@
+
+\section*{Instrucciones de uso}
+
+Este es un archivo de \LaTeX normal, salvo que se le pueden agregar códigos de R.
+
+Para hacerlo solo debe encerrar su código con lo siguiente comandos.
+
+\
+
+\noindent\verb|<<>>=|
+
+\verb|Su código acá.|
+
+\noindent\verb|@|
+
+\
+
+Algunas recomendaciones iniciales:
+
+\begin{itemize}
+	\item Tratemos de ser ordenados con el texto y el código. Recuerden que esto será usado por ustedes en el examen.
+	\item No usen comandos propios (\texttt{newcommand}) ya que eso solo haría más difícil que los compañeros puedan editar su trabajo.
+	\item El documento es colaborativo, por lo que está bien editar o escribir ``encima'' de otro compañero, siempre y cuando esto sea para mejorar el texto.
+\end{itemize}
+
+Creo en el buen juicio de cada uno para hacer estas notas lo mejor posible.
+
+\begin{minipage}[c]{0.5\textwidth}
+	Para entender mejor la estructura de estas notas, pueden revisar este enlace \url{https://www.overleaf.com/learn/latex/Knitr}
+\end{minipage}
+
+\newpage

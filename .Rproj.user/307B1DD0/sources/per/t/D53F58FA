@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587819414377.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "708209573",
+    "id" : "D53F58FA",
+    "lastKnownWriteTime" : 1588003213,
+    "last_content_update" : 1588003213449,
+    "path" : "~/Dropbox/Apps/Overleaf/Estadística II (CA-403)/cap-1-estimacion-densidades-no-parametricas.Rtex",
+    "project_path" : "cap-1-estimacion-densidades-no-parametricas.Rtex",
+    "properties" : {
+        "cursorPosition" : "1689,46",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sweave"
+}

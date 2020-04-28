@@ -1,0 +1,20 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fhat} \hlkwb{<-} \hlkwd{bkde}\hlstd{(x,} \hlkwc{kernel} \hlstd{=} \hlstr{"epa"}\hlstd{,} \hlkwc{bandwidth} \hlstd{=} \hlnum{0.001}\hlstd{)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in bkde(x, kernel = "{}epa"{}, bandwidth = 0.001): Binning grid too coarse for current (small) bandwidth: consider increasing 'gridsize'}}\begin{alltt}
+\hlkwd{plot}\hlstd{(fhat,} \hlkwc{type} \hlstd{=} \hlstr{"l"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-19-1} 
+\begin{kframe}\begin{alltt}
+\hlstd{fhat} \hlkwb{<-} \hlkwd{bkde}\hlstd{(x,} \hlkwc{kernel} \hlstd{=} \hlstr{"epa"}\hlstd{,} \hlkwc{bandwidth} \hlstd{=} \hlnum{0.5}\hlstd{)}
+\hlkwd{plot}\hlstd{(fhat,} \hlkwc{type} \hlstd{=} \hlstr{"l"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-19-2} 
+
+\end{knitrout}

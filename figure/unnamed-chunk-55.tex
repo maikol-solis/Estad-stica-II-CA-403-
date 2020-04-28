@@ -1,0 +1,41 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+   \hlkwd{kable}\hlstd{(}\hlkwd{data.frame}\hlstd{(}
+     \hlkwc{`Método`} \hlstd{=} \hlkwd{c}\hlstd{(}
+       \hlstr{"Jacknife"}\hlstd{,}
+       \hlstr{"Bootstrap Normal"}\hlstd{,}
+       \hlstr{"Bootstrap Pivotal"}\hlstd{,}
+       \hlstr{"Bootstrap Pivotal Estudentizado"}
+     \hlstd{),}
+     \hlkwc{Inferior} \hlstd{=} \hlkwd{c}\hlstd{(}
+       \hlstd{Tjack} \hlopt{-} \hlstd{z} \hlopt{*} \hlstd{sdjack} \hlopt{/} \hlkwd{sqrt}\hlstd{(n),}
+       \hlstd{Tn} \hlopt{-} \hlstd{z} \hlopt{*} \hlstd{sdboot,}
+       \hlnum{2} \hlopt{*} \hlstd{Tn} \hlopt{-} \hlkwd{quantile}\hlstd{(Tboot_b,} \hlnum{1} \hlopt{-} \hlnum{0.05} \hlopt{/} \hlnum{2}\hlstd{),}
+       \hlstd{Tn} \hlopt{-} \hlkwd{quantile}\hlstd{(z_star,} \hlnum{1} \hlopt{-} \hlnum{0.05} \hlopt{/} \hlnum{2}\hlstd{)} \hlopt{*}   \hlstd{sdboot}
+     \hlstd{),}
+     \hlkwc{Superior} \hlstd{=} \hlkwd{c}\hlstd{(}
+        \hlstd{Tjack} \hlopt{+} \hlstd{z} \hlopt{*} \hlstd{sdjack} \hlopt{/} \hlkwd{sqrt}\hlstd{(n),}
+        \hlstd{Tn} \hlopt{+} \hlstd{z} \hlopt{*} \hlstd{sdboot,}
+         \hlnum{2} \hlopt{*} \hlstd{Tn} \hlopt{-} \hlkwd{quantile}\hlstd{(Tboot_b,} \hlnum{0.05} \hlopt{/} \hlnum{2}\hlstd{),}
+        \hlstd{Tn} \hlopt{-} \hlkwd{quantile}\hlstd{(z_star,} \hlnum{0.05} \hlopt{/} \hlnum{2}\hlstd{)} \hlopt{*}   \hlstd{sdboot}
+     \hlstd{)}
+   \hlstd{))}
+\end{alltt}
+\end{kframe}
+\begin{tabular}{l|r|r}
+\hline
+Método & Inferior & Superior\\
+\hline
+Jacknife & 285.1679 & 573.3289\\
+\hline
+Bootstrap Normal & 285.9510 & 572.5458\\
+\hline
+Bootstrap Pivotal & 273.7930 & 554.8922\\
+\hline
+Bootstrap Pivotal Estudentizado & 317.0387 & 519.9397\\
+\hline
+\end{tabular}
+
+
+\end{knitrout}

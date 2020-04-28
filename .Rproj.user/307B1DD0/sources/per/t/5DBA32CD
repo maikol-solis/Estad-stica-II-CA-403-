@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587760808903.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3903764426",
+    "id" : "5DBA32CD",
+    "lastKnownWriteTime" : 1588038860,
+    "last_content_update" : 1588038860,
+    "path" : "~/Dropbox/Apps/Overleaf/Estadística II (CA-403)/main-CA-403_notas.Rtex",
+    "project_path" : "main-CA-403_notas.Rtex",
+    "properties" : {
+        "cursorPosition" : "87,13",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sweave"
+}

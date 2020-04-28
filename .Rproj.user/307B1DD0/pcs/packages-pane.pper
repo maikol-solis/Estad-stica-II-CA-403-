@@ -1,0 +1,7 @@
+{
+    "installOptions" : {
+        "installDependencies" : true,
+        "installFromRepository" : true,
+        "libraryPath" : "/home/maikol/R/x86_64-suse-linux-gnu-library/4.0"
+    }
+}
