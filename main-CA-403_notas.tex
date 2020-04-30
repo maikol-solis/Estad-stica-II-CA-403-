@@ -713,19 +713,14 @@ Para el sesgo tenemos
 
 \begin{solucion}{}{Pba_tarea_Sesgo}
 	\begin{align*}
-		  & \mathrm{Sesgo}(\hat{f_{h}}(x))
-		\\
-		  & = \int \frac{1}{h} K\left( \frac{x-u}{h} \right) f(u)du - f(x)
-		\\
-		  & = \frac{1}{h} \int hK(s)f(sh+x) ds - f(x)
-		\\
-		  & = \int K(s)\left[ f(x) + f^{\prime}(x)(sh+x-x) + \frac{f^{\prime\prime}(x)}{2}(sh+x-x)^2 + o(h^{2}) \right] - f(x)
-		\\
-		  & = \int K(s)f(x)ds + \int hf^{\prime}(x)sK(s) ds + \int \frac{h^2}{2} f^{\prime\prime}(x)s^2K(s) ds + o(h^2) - f(x)
-		\\
-		  & = f(x) + 0 + \frac{h^2}{2}f^{\prime\prime}(x)\mu_{2}(K) + o(h^2) - f(x)
-		\\
-		  & = \frac{h^2}{2}f^{\prime\prime}(x)\mu_{2}(K) + o(h^2)
+\mathrm{Sesgo}(\hat{f_{h}}(x)) & = \int \frac{1}{h} K\left( \frac{x-u}{h} \right) f(u)du - f(x)		\\
+& = \frac{1}{h} \int hK(s)f(sh+x) ds - f(x) \\
+ & = \int K(s)\Biggl[ f(x) + f^{\prime}(x)(sh+x-x)  \\
+ &  \qquad  + \frac{f^{\prime\prime}(x)}{2}(sh+x-x)^2 + o(h^{2}) \Biggr] - f(x) \\
+ & = \int K(s)f(x)ds + \int hf^{\prime}(x)sK(s) ds  \\
+ & \qquad  + \int \frac{h^2}{2} f^{\prime\prime}(x)s^2K(s) ds + o(h^2) - f(x) \\
+ & = f(x) + 0 + \frac{h^2}{2}f^{\prime\prime}(x)\mu_{2}(K) + o(h^2) - f(x)	\\
+ & = \frac{h^2}{2}f^{\prime\prime}(x)\mu_{2}(K) + o(h^2) \\
 	\end{align*}
 \end{solucion}
 
