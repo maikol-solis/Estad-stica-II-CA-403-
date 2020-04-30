@@ -1,0 +1,7 @@
+*.run.xml
+*.Rproj.user
+*.vscode
+*.bak*
+*.bcf
+*.fls
+*.fdb_latexmk
